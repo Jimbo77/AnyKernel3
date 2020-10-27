@@ -412,15 +412,14 @@ if [ -f version ]; then
   ui_printfile version;
   ui_print " ";
 fi;
-ui_print " " "AnyKernel3 by osm0sis @ xda-developers" " " " ";
-
+ui_print " " "Now Installing JimboK Kernel for S20,S20+,S20U,S20FE,N20 & N20U by jimbo77@xda-developers";
 setup_env;
 
 do_devicecheck;
 do_versioncheck;
 do_levelcheck;
 
-ui_print "Installing...";
+#ui_print "Installing...";
 CORE=$($BB grep -oE 'ak.*core.sh' anykernel.sh);
 test -f tools/$CORE || $BB ln -s $AKHOME/tools/ak*-core.sh $AKHOME/tools/$CORE;
 PATH="$AKHOME/bin:$PATH" home=$AKHOME $BB ash anykernel.sh $2;
@@ -438,3 +437,4 @@ if [ "$(file_getprop anykernel.sh do.cleanup)" == 1 ]; then
 fi;
 
 ui_print " " " " "Done!";
+ui_print " " " " "Leave feedback and support the development effort :)";

@@ -4,7 +4,7 @@
 ## AnyKernel setup
 # begin properties
 properties() { '
-kernel.string=Welcome to JimboK Kernel installer for S20,S20+,S20U,S20FE,N20 & N20U by jimbo77@xda-developers
+kernel.string=
 do.devicecheck=1
 do.modules=0
 do.systemless=0
