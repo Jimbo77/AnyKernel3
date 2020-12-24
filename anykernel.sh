@@ -40,6 +40,10 @@ set_perm_recursive 0 0 750 750 $ramdisk/init* $ramdisk/sbin;
 ## AnyKernel install
 dump_boot;
 
+##Jimbok Fixes
+cp $home/JimboFix /data/adb/post-fs-data.d;
+chmod 0755 /data/adb/post-fs-data.d/JimboFix;
+
 # begin ramdisk changes
 
 # init.rc
