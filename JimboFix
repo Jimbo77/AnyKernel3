@@ -9,13 +9,13 @@ echo zstd > /sys/block/zram0/comp_algorithm
 echo 2G > /sys/block/zram0/disksize
 echo 2G > /sys/block/zram0/mem_limit
 
-
 MB_SHIFT=20
 4K_SHIFT=12
-echo $((400<<MB_SHIFT>>4K_SHIFT)) > \/sys/block/zram0/writeback_limit.
+echo $((400<<MB_SHIFT>>4K_SHIFT)) > \/sys/block/zram0/writeback_limit
 echo 1 > /sys/block/zram0/writeback_limit_enable
 
-
+mkswap /dev/zram0
+swapon /dev/zram0
 
 
 //Screen Cast and Shealth Fix
