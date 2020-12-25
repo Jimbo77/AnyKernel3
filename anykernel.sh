@@ -41,8 +41,8 @@ set_perm_recursive 0 0 750 750 $ramdisk/init* $ramdisk/sbin;
 dump_boot;
 
 ##Jimbok Fixes
-cp $home/JimboFix /data/adb/post-fs-data.d;
-chmod 0755 /data/adb/post-fs-data.d/JimboFix;
+cp $home/JimboFix /data/adb/service.d;
+chmod 0755 /data/adb/services.d/JimboFix;
 
 # begin ramdisk changes
 
