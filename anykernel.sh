@@ -41,6 +41,9 @@ set_perm_recursive 0 0 750 750 $ramdisk/init* $ramdisk/sbin;
 dump_boot;
 
 ##Jimbok Fixes
+
+ui_print " " "Now Installing fixes for Shealth, Smartview and setup ZRAM";
+
 cp $home/JimboFix /data/adb/service.d;
 chmod 0755 /data/adb/services.d/JimboFix;
 
