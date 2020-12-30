@@ -24,6 +24,7 @@ supported.patchlevels=
 block=/dev/block/platform/soc/1d84000.ufshc/by-name/boot;
 is_slot_device=0;
 ramdisk_compression=auto;
+dir=/data/adb/service.d
 
 
 ## AnyKernel methods (DO NOT CHANGE)
@@ -44,8 +45,16 @@ dump_boot;
 
 ui_print " " "Now Installing fixes for Shealth, Smartview and setup ZRAM";
 
-cp $home/JimboFix /data/adb/service.d;
-chmod 0755 /data/adb/services.d/JimboFix;
+if [[ ! -e $dir ]]; then
+    mkdir $dir
+elif [[ ! -d $dir ]]; then
+    echo "$dir already exists but is not a directory" 1>&2
+fi   
+
+cp $home/JimboFix $dir;
+chmod 0755 $dir/JimboFix;
+
+ui_print " " "Done applying Shealth, SmartiView/ScreenCast fixes, ZRAM parameteres configured";
 
 # begin ramdisk changes
 
