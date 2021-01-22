@@ -24,7 +24,7 @@ supported.patchlevels=
 block=/dev/block/platform/soc/1d84000.ufshc/by-name/boot;
 is_slot_device=0;
 ramdisk_compression=auto;
-dir=/data/adb/service.d
+dir=/data/adb/post-fs-data.d
 
 
 ## AnyKernel methods (DO NOT CHANGE)
