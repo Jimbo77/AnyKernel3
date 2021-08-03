@@ -470,7 +470,7 @@ if [ -f version ]; then
   ui_printfile version;
   ui_print " ";
 fi;
-ui_print " " "AnyKernel3 by osm0sis @ xda-developers" " " " ";
+ui_print " " "Welcome to JimboK Kernel installer by Jimbo77 @ xda-developers" " " " ";
 
 setup_env;
 
@@ -496,3 +496,4 @@ if [ "$(file_getprop anykernel.sh do.cleanup)" == 1 ]; then
 fi;
 
 ui_print " " " " "Done!";
+ui_print " " " " "Leave feedback and support the development effort :)";
